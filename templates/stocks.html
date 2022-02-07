@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Stocks Page{% endblock %}
+
+{% block content %}
+
+  <div class="fluid-container">
+    <h1 class="text-center">Stocks tweet sentiment analysis</h1>
+    <div class="container">
+    <form class="p-3 text-center" action="/hello", method="post" enctype="multipart/form-data" >
+        <input class="form-control" type="text", value="Copy tweet here" name="typetext">
+        <input class="btn btn-primary mt-3" type="submit", value="Predict Tweet">
+    </form>
+
+    {% if prediction %}
+    <p class="text-center" style="font-size:xx-large;"> News is {{prediction}}</p>
+    {% endif %} 
+
+    </div>
+
+
+    <div class="container" style="margin: auto;">
+      <h3 style="text-align: center; padding-bottom:10px">Tools used for this project </h3>
+      <div class="row flex item-center">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+          <h2> HTML</h2>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+          <h2> CSS</h2>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+          <h2> Bootstrap</h2>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+          <h2> Python</h2>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+          <h2> Spacy</h2>
+        </div>
+      </div>
+
+    
+    <a  href="/">go to home page</a>
+  </div>
+  </div>
+
+{% endblock %}
